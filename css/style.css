@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+body {
+  margin: 0;
+}
+#navbar {
+    position: fixed;
+    z-index: 999;
+    margin-top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #2b2b5f;
+    display: flex;
+    list-style-type: none;
+  }
+  #navbar a {
+    color: white;
+    display: block;
+    padding:10px 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+.parallax-wrapper {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.background {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+}
+.background--photo {
+  background-image: url('../img/photography.jpeg');
+}
+.background--fashion {
+  background-image: url('../img/fashion.jpeg');
+}
+.background--dev {
+  background-image: url('../img/programmer.jpeg');
+}
+.background--art {
+  background-image: url('../img/art-lover.jpeg');
+}
+.title {
+  position: absolute;
+  margin: 0;
+  top: calc(50% - 50px);
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  height: 70px;
+  color: white;
+  font-size: 3.5rem;
+  background: rgba(0,0,0,0.4);
+}
+
+.profile-desc {
+  z-index: 1;
+  position: relative;
+  background: #282E34;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  line-height: 2em;
+  padding: 3rem;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+  .desc-wrapper {
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .profile--title {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .profile--about {
+    margin-top: 40px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: #2b2b5f;
+  }
+
+@media (max-width: 998px) and (orientation: portrait) {
+  .profile-desc {
+    padding: 1.5rem 20px;
+    font-size: 1rem;
+    height: unset;
+    min-height: 100vh;
+  }
+    .profile-title {
+      font-size: 2.5rem;
+      margin: 20px 0;
+      letter-spacing: unset;
+    }
+    .profile-about {
+      margin-top: 20px;
+     }
+}
